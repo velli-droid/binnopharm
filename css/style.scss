@@ -29,6 +29,7 @@
 $white: #FFFFFF;
 $balck: #1D1D1B;
 $blue: #1655A3;
+$light-blue: #297BE1;
 
 body {
     font-family: 'Futura PT', sans-serif;
@@ -263,8 +264,7 @@ h1, h2, h3, h4, h5, h6 , p {
         overflow: hidden;
         border-color: transparent;
         &:hover {
-            .arrow-link__bg,
-            .arrow-link__overlay {
+            .arrow-link__bg {
                 opacity: 1;
             }
             .arrow-link__text {
@@ -290,18 +290,6 @@ h1, h2, h3, h4, h5, h6 , p {
             height: 100%;
             object-fit: cover;
         }
-    }
-    &__overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        opacity: 0;
-        background: radial-gradient(50% 50% at 50% 50%, rgba(22, 85, 163, 0.4) 0%, rgba(255, 255, 255, 0) 100%),
-        linear-gradient(360deg, rgba(22, 85, 163, 0.4) 19.83%, rgba(22, 85, 163, 0) 100%);
-        transition: .3s linear;
     }
     &:hover {
         svg {
@@ -333,9 +321,36 @@ h1, h2, h3, h4, h5, h6 , p {
 // gradient slider
 
 .gradient-swiper {
+    position: relative;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    &__controls {
+        position: absolute;
+        top: 97px;
+        right: 45px;
+        display: flex;
+        align-items: center;
+        z-index: 3;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $blue;
+        margin-right: 8px;
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0;
+        }
+        svg {
+            display: block;
+            width: 17px;
+        }
+    }
 }
 
 .gradient-slide {
@@ -346,7 +361,7 @@ h1, h2, h3, h4, h5, h6 , p {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 110%;
+        width: 105%;
         transform: translate(-50%, -50%);
         z-index: -2;
         img {
@@ -377,6 +392,156 @@ h1, h2, h3, h4, h5, h6 , p {
     }
 }
 
+// production
+
+.production {
+    position: relative;
+    height: 900px;
+    background: $light-blue;
+    color: $white;
+    &__inner {
+        display: flex;
+        height: inherit;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        min-width: 45%;
+        max-width: 494px;
+        padding: 0 72px 0 27px;
+        height: inherit;
+    }
+    &__title {
+        margin-bottom: 24px;
+    }
+    &__text {
+        margin-bottom: 32px;
+    }
+    &__swiper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 55%;
+        height: inherit;
+    }
+}
+
+.production-swiper {
+    width: 100%;
+    height: 100%;
+    &__slide {
+        position: relative;
+        padding: 72px 26px 0 80px;
+        z-index: 1;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(90deg, rgba(22, 85, 163, 0.74) 18.23%, rgba(22, 85, 163, 0) 100%);
+    }
+    &__logo {
+        width: 195px;
+        margin-bottom: 16px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__location {
+        margin-bottom: 154px;
+    }
+    &__list {
+        margin-top: 36px;
+    }
+    &__pagination {
+        top: auto !important;
+        right: auto !important;
+        left: 80px !important;
+        bottom: 47px !important;
+        transform: translate3d(0, 0, 0) !important;
+        .swiper-pagination-bullet {
+            background: $white;
+            margin-left: 0 !important;
+            margin-bottom: 12px !important;
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+    &__btns {
+        position: absolute;
+        right: 45px;
+        bottom: 47px;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $blue;
+        margin-bottom: 8px;
+        cursor: pointer;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        svg {
+            display: block;
+            width: 18px;
+            height: auto;
+        }
+    }
+}
+
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    &__item {
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 34px;
+        font-size: 28px;
+        line-height: 120%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 44px;
+            background: $white;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
 
 // news
 
@@ -506,8 +671,115 @@ h1, h2, h3, h4, h5, h6 , p {
     }
 }
 
+// news slider
+
+.news-swiper {
+    padding: 48px 0 65px;
+    &__title {
+        margin-bottom: 32px;
+    }
+    &__pic {
+        width: 100%;
+        margin-bottom: 16px;
+        overflow: hidden;
+        border-radius: 10px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__slide-title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 120%;
+    }
+    &__tags {
+        margin-bottom: 8px;
+    }
+    &__pagination {
+        position: static !important;
+        width: auto !important;
+        margin: 0 15px;
+    }
+    &__wrapper {
+        padding-bottom: 44px;
+    }
+    &__controls {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.swiper-tags {
+    display: flex;
+    align-items: center;
+    &__item {
+        position: relative;
+        font-size: 22px;
+        line-height: 120%;
+        color: $blue;
+        margin-right: 38px;
+        &::before {
+            content: "•";
+            position: absolute;
+            top: 0;
+            right: -30px;
+            width: 22px;
+            height: 26px;
+            text-align: center;
+        }
+        &:last-child {
+            margin-right: 0;
+            &::before {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $blue;
+        transition: .2s linear;
+        border-bottom: 1px solid transparent;
+        &:hover {
+            border-color: $blue;
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    margin: 0 10px !important;
+    opacity: 0.5 !important;
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: $balck;
+}
 
 
+
+.news-swiper-btn {
+    width: 21px;
+    height: 21px;
+    margin-top: 5px;
+    cursor: pointer;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0.6;
+}
 
 // footer
 
