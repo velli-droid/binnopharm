@@ -328,8 +328,8 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100%;
   z-index: -2;
   opacity: 0;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
 }
 
 .arrow-link__bg img {
@@ -348,9 +348,10 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100%;
   z-index: -1;
   opacity: 0;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(22, 85, 163, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(22, 85, 163, 0.4) 0%, rgba(255, 255, 255, 0) 100%), -webkit-gradient(linear, left bottom, left top, color-stop(19.83%, rgba(22, 85, 163, 0.4)), to(rgba(22, 85, 163, 0)));
+  background: radial-gradient(50% 50% at 50% 50%, rgba(22, 85, 163, 0.4) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(360deg, rgba(22, 85, 163, 0.4) 19.83%, rgba(22, 85, 163, 0) 100%);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
 }
 
 .arrow-link:hover svg {

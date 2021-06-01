@@ -283,7 +283,7 @@ h1, h2, h3, h4, h5, h6 , p {
         height: 100%;
         z-index: -2;
         opacity: 0;
-        transition: .2s linear;
+        transition: .3s linear;
         img {
             display: block;
             width: 100%;
@@ -299,8 +299,9 @@ h1, h2, h3, h4, h5, h6 , p {
         height: 100%;
         z-index: -1;
         opacity: 0;
-        background: radial-gradient(50% 50% at 50% 50%, rgba(22, 85, 163, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
-        transition: .2s linear;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(22, 85, 163, 0.4) 0%, rgba(255, 255, 255, 0) 100%),
+        linear-gradient(360deg, rgba(22, 85, 163, 0.4) 19.83%, rgba(22, 85, 163, 0) 100%);
+        transition: .3s linear;
     }
     &:hover {
         svg {
