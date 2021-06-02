@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>«Биннофарм Групп»</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1089fda2-950a-47d9-b621-753c721802c8&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <header class="header header_blue">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__top">
+                    <div class="header__logo logo">
+                        <a href="#" class="logo__link">
+                            <img src="img/logo.png" alt="Лого">
+                        </a>
+                    </div>
+                    <form class="header__search search-form">
+                        <div class="form-group">
+                            <input type="text" id="page-search" name="search" class="form-input search-form__input" placeholder=" " autocomplete="off">
+                            <label for="page-search" class="form-label search-form__label">
+                                Поиск по сайту...
+                            </label>
+                            <button type="submit" class="form-submit search-form__submit">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="#1655A3"/>
+                                </svg>                                    
+                            </button>
+                            <div class="search-form__close">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#1D1D1B" fill-opacity="0.8"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="header__side-btns side-btns">
+                        <div class="side-btns__item search-btn">
+                            <a href="#" class="side-btns__link search-btn__link">
+                                <img src="img/search-loupe.svg" alt="Поиск">
+                            </a>    
+                        </div>
+                        <div class="side-btns__item page-lang">
+                            <a href="#" class="side-btns__link page-lang__link">
+                                En
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Производство
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Портфель препаратов
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Инвесторам
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Карьера
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Социальная ответственность
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Пресс-служба
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>  
+            </div>
+        </div>
+    </header>
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts__inner">
+                <div class="contacts__content">
+                    <div class="contacts__title section-title">
+                        <h2>Контакты</h2>
+                    </div>
+                    <div class="contacts__list contacts-list">
+                        <div class="contacts-list__item">
+                            <div class="contacts-list__title contacts-list__title_blue">
+                                Адрес
+                            </div>
+                            <div class="contacts-list__text">
+                                115114, г. Москва, ул. Кожевническая, д. 14, стр. 5
+                            </div>
+                        </div>
+                        <div class="contacts-list__item">
+                            <div class="contacts-list__title">
+                                Пешеходам
+                            </div>
+                            <div class="contacts-list__text">
+                                Пеший вход в БЦ Black&White осуществляется с ул. Летниковская
+                            </div>
+                        </div>
+                        <div class="contacts-list__item contacts-list__item_margin">
+                            <div class="contacts-list__title">
+                                Парковка
+                            </div>
+                            <div class="contacts-list__text">
+                                Въезд с ул. Кожевническая (по предварительному заказу пропуска)
+                            </div>
+                        </div>
+                        <div class="contacts-list__item contacts-list__item_margin">
+                            <div class="contacts-list__title contacts-list__title_blue">
+                                Тел./факс:
+                            </div>
+                            <div class="contacts-list__text">
+                                <div class="contacts-list__links">
+                                    <a href="tel:+74956462868" class="contacts-list__link">
+                                        + 7 (495) 646-28-68
+                                    </a>
+                                    <a href="tel:+74951375727" class="contacts-list__link">
+                                        + 7 (495) 137 57 27
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts-list__item">
+                            <div class="contacts-list__title contacts-list__title_blue">
+                                E-mail
+                            </div>
+                            <div class="contacts-list__text">
+                                <div class="contacts-list__links">
+                                    <a href="mailto:info@binnopharmgroup.ru" class="contacts-list__link">
+                                        info@binnopharmgroup.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__map" id="map"></div>
+            </div>
+        </div>
+    </section>
+    <section class="positions">
+        <div class="container">
+            <div class="positions__inner">
+                <div class="positions-list">
+                    <div class="positions-list__item">
+                        <div class="positions-list__title">
+                            Корпоративный
+                            секретарь
+                        </div>
+                        <div class="positions-list__description">
+                            Взаимодействие с <br>
+                            акционерами
+                        </div>
+                        <a href="mailto:info@binnopharmgroup.ru" class="positions-list__link">
+                            <div class="positions-list__link-icon">
+                                <img src="img/mail-blue.svg" alt="">
+                            </div>
+                            <div class="positions-list__link-text">
+                                info@binnopharmgroup.ru
+                            </div>
+                        </a>
+                    </div>
+                    <div class="positions-list__item">
+                        <div class="positions-list__title">
+                            Фармаконадзор
+                        </div>
+                        <div class="positions-list__description">
+                            Сообщения о нежелательной <br>
+                            реакции, возникшей <br>
+                            при применении препарата
+                        </div>
+                        <a href="mailto:adversereaction@drugsafety.ru" class="positions-list__link">
+                            <div class="positions-list__link-icon">
+                                <img src="img/mail-blue.svg" alt="">
+                            </div>
+                            <div class="positions-list__link-text">
+                                adversereaction@drugsafety.ru
+                            </div>
+                        </a>
+                    </div>
+                    <div class="positions-list__item">
+                        <div class="positions-list__title">
+                            Горячая линия
+                        </div>
+                        <div class="positions-list__description">
+                            Сообщения о недостатках <br>
+                            для совершенствования <br>
+                            деятельности компании
+                        </div>
+                        <a href="mailto:report@binnopharmgroup.ru" class="positions-list__link">
+                            <div class="positions-list__link-icon">
+                                <img src="img/mail-blue.svg" alt="">
+                            </div>
+                            <div class="positions-list__link-text">
+                                report@binnopharmgroup.ru
+                            </div>
+                        </a>
+                    </div>
+                    <div class="positions-list__item">
+                        <div class="positions-list__title">
+                            Департамент
+                            по персоналу
+                        </div>
+                        <div class="positions-list__description">
+                            Работа и трудоустройство
+                        </div>
+                        <a href="mailto:hr@binnopharmgroup.ru" class="positions-list__link">
+                            <div class="positions-list__link-icon">
+                                <img src="img/mail-blue.svg" alt="">
+                            </div>
+                            <div class="positions-list__link-text">
+                                hr@binnopharmgroup.ru
+                            </div>
+                        </a>
+                    </div>
+                    <div class="positions-list__item">
+                        <div class="positions-list__title">
+                            Пресс-служба
+                        </div>
+                        <div class="positions-list__description">
+                            Взаимодействие со СМИ <br>
+                            и связи с общественностью
+                        </div>
+                        <a href="mailto:pr@binnopharmgroup.ru" class="positions-list__link">
+                            <div class="positions-list__link-icon">
+                                <img src="img/mail-blue.svg" alt="">
+                            </div>
+                            <div class="positions-list__link-text">
+                                pr@binnopharmgroup.ru
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__top">
+                    <div class="footer__col">
+                        <nav class="footer__nav">
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    О компании
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Производство
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Портфель препаратов
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Инвесторам
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="footer__col">
+                        <nav class="footer__nav">
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Карьера
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Пресс-служба
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Социальная ответственность
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Фармаконадзор
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__contacts">
+                            <div class="footer__contacts-title">
+                                Контакты
+                            </div>
+                            <div class="footer__contacts-item">
+                                <div class="footer__contacts-icon">
+                                    <img src="img/phone.png" alt="Телефон">
+                                </div>
+                                <div class="footer__contacts-text">
+                                    <a href="tel:+74956462868" class="footer__contacts-link">
+                                        +7 (495) 646-28-68
+                                    </a>
+                                    <a href="tel:+74956462868" class="footer__contacts-link">
+                                        +7 (495) 646-28-68
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer__contacts-item">
+                                <div class="footer__contacts-icon">
+                                    <img src="img/mail.png" alt="Емайл">
+                                </div>
+                                <div class="footer__contacts-text">
+                                    <a href="mailto:info@binnopharmgroup.ru" class="footer__contacts-link">
+                                        info@binnopharmgroup.ru
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer__contacts-item">
+                                <div class="footer__contacts-icon">
+                                    <img src="img/location.png" alt="Локация">
+                                </div>
+                                <div class="footer__contacts-text">
+                                    115114, г. Москва, ул. Кожевническая, д. 14, стр. 5
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__btn">
+                            <a href="#" class="footer__btn-link">
+                                Горячая линия
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">
+                        2021 ©  ООО «Биннофарм Групп»
+                    </div>
+                    <div class="footer__privacy">
+                        <a href="" class="footer__privacy-link">
+                            Политика конфиденциальности
+                        </a>
+                    </div>
+                    <div class="footer__logo">
+                        <a href="#" class="footer__logo-link">
+                            <img src="img/footer-logo.png" alt="Пиксель Плюс">
+                        </a>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
