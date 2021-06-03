@@ -1420,4 +1420,48 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-transition: .2s linear;
   transition: .2s linear;
 }
+
+.ymaps-2-1-78-balloon__layout {
+  overflow: auto !important;
+  border-radius: 3.03697px !important;
+}
+
+.ymaps-2-1-78-balloon__close {
+  display: none;
+}
+
+.ymaps-2-1-78-balloon__content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ymaps-2-1-78-balloon__tail {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.map__balloon {
+  position: relative;
+  width: 117px;
+  padding: 6px 9px;
+}
+
+.map__balloon::before {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 23px;
+  height: 9px;
+  background: url(../img/tail.png) no-repeat center;
+  background-size: contain;
+}
+
+.map__logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=style.css.map */
