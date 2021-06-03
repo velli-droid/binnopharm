@@ -522,43 +522,33 @@ h1, h2, h3, h4, h5, h6, p {
 .infographics__item_animated::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 315px;
-  height: 315px;
+  top: 13px;
+  left: 13px;
+  width: 290px;
+  height: 290px;
   z-index: -1;
   background: url(../img/blue-circle.png) no-repeat center;
   background-size: contain;
-  -webkit-animation: rotation-right 2s linear infinite;
-          animation: rotation-right 2s linear infinite;
+  -webkit-animation: rotation-left 10s linear infinite;
+          animation: rotation-left 10s linear infinite;
+}
+
+.infographics__item_animated::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 345px;
+  height: 345px;
+  z-index: -1;
+  background: url(../img/orange-circle.png) no-repeat center;
+  background-size: contain;
+  -webkit-animation: rotation-right 10s linear infinite;
+          animation: rotation-right 10s linear infinite;
 }
 
 .infographics__item:last-child .infographics__wrapper {
   padding: 30px;
-}
-
-.infographics .infographics__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: rgba(22, 85, 163, 0.05);
 }
 
 .infographics__pic {
@@ -598,6 +588,38 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
 }
 
+.infographics__item_animated-phase::before {
+  -webkit-animation: rotation-left-second 10s linear infinite;
+          animation: rotation-left-second 10s linear infinite;
+}
+
+.infographics__item_animated-phase::after {
+  -webkit-animation: rotation-right-second 10s linear infinite;
+          animation: rotation-right-second 10s linear infinite;
+}
+
+.infographics__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(22, 85, 163, 0.05);
+}
+
 @-webkit-keyframes rotation-right {
   from {
     -webkit-transform: rotate(0);
@@ -617,6 +639,72 @@ h1, h2, h3, h4, h5, h6, p {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotation-left {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotation-left {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes rotation-right-second {
+  from {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes rotation-right-second {
+  from {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes rotation-left-second {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@keyframes rotation-left-second {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
   }
 }
 

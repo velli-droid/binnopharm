@@ -440,34 +440,33 @@ h1, h2, h3, h4, h5, h6 , p {
             &::before {
                 content: "";
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 315px;
-                height: 315px;
+                top: 13px;
+                left: 13px;
+                width: 290px;
+                height: 290px;
                 z-index: -1;
                 background: url(../img/blue-circle.png) no-repeat center;
                 background-size: contain;
-                animation: rotation-right 2s linear infinite;
+                animation: rotation-left 10s linear infinite;
             }
-        }
+            &::after {
+                content: "";
+                position: absolute;
+                top: -15px;
+                left: -15px;
+                width: 345px;
+                height: 345px;
+                z-index: -1;
+                background: url(../img/orange-circle.png) no-repeat center;
+                background-size: contain;
+                animation: rotation-right 10s linear infinite;
+            }
+        }  
         &:last-child {
             .infographics__wrapper {
                 padding: 30px;
             }
         }
-    }
-    .infographics__wrapper {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: rgba(22, 85, 163, 0.05);
     }
     &__pic {
         position: absolute;
@@ -501,6 +500,28 @@ h1, h2, h3, h4, h5, h6 , p {
     }
 }
 
+.infographics__item_animated-phase {
+    &::before {
+        animation: rotation-left-second 10s linear infinite;
+    }
+    &::after {
+        animation: rotation-right-second 10s linear infinite;
+    }
+}
+
+.infographics__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(22, 85, 163, 0.05);
+}
+
 @keyframes rotation-right {
     from {
         transform: rotate(0);
@@ -508,7 +529,33 @@ h1, h2, h3, h4, h5, h6 , p {
     to {
         transform: rotate(360deg);
     }
+}
 
+@keyframes rotation-left {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotation-right-second {
+    from {
+        transform: rotate(-180deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotation-left-second {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(-180deg);
+    }
 }
 
 
@@ -1222,4 +1269,3 @@ h1, h2, h3, h4, h5, h6 , p {
         transition: .2s linear;
     }
 }
-
