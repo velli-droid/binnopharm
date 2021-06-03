@@ -30,6 +30,7 @@ $white: #FFFFFF;
 $balck: #1D1D1B;
 $blue: #1655A3;
 $light-blue: #297BE1;
+$orange: #E85412;
 
 body {
     font-family: 'Futura PT', sans-serif;
@@ -410,6 +411,106 @@ h1, h2, h3, h4, h5, h6 , p {
         margin-left: auto;
     }
 }
+
+// infographics
+
+.infographics {
+    padding: 85px 0 118px;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 315px;
+        height: 315px;
+        padding: 8px;
+        color: $blue;
+        font-size: 18px;
+        line-height: 120%;
+        border: 6px solid rgba(44, 124, 224, 0.7);
+        border-radius: 50%;
+        &_animated {
+            padding: 31px;
+            border: none;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 315px;
+                height: 315px;
+                z-index: -1;
+                background: url(../img/blue-circle.png) no-repeat center;
+                background-size: contain;
+                animation: rotation-right 2s linear infinite;
+            }
+        }
+        &:last-child {
+            .infographics__wrapper {
+                padding: 30px;
+            }
+        }
+    }
+    .infographics__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: rgba(22, 85, 163, 0.05);
+    }
+    &__pic {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -2;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__suptitle {
+        margin-bottom: 4px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 46px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $orange;
+        margin-bottom: 4px;
+    }
+    &__text {
+        text-align: center;
+    }
+}
+
+@keyframes rotation-right {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
 
 // gradient slider
 
@@ -1004,9 +1105,10 @@ h1, h2, h3, h4, h5, h6 , p {
     &__map {
         width: 63%;
         max-width: 850px;
-        iframe {
+        img {
+            display: block;
             width: 100%;
-            height: 100%;
+            height: auto;
         }
     }
     &__title {
@@ -1121,43 +1223,3 @@ h1, h2, h3, h4, h5, h6 , p {
     }
 }
 
-.ymaps-2-1-78-balloon__layout {
-    overflow: auto !important;
-    border-radius: 3.03697px !important;
-}
-
-.ymaps-2-1-78-balloon__close {
-    display: none;
-}
-
-.ymaps-2-1-78-balloon__content {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.ymaps-2-1-78-balloon__tail {
-    transform: rotate(0);
-}
-
-.map__balloon {
-    position: relative;
-    width: 117px;
-    padding: 6px 9px;
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: -9px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 23px;
-        height: 9px;
-        background: url(../img/tail.png) no-repeat center;
-        background-size: contain;
-    }
-}
-
-.map__logo {
-    display: block;
-    width: 100%;
-    height: auto;
-}

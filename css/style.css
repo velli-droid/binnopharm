@@ -477,6 +477,149 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: auto;
 }
 
+.infographics {
+  padding: 85px 0 118px;
+}
+
+.infographics__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.infographics__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 315px;
+  height: 315px;
+  padding: 8px;
+  color: #1655A3;
+  font-size: 18px;
+  line-height: 120%;
+  border: 6px solid rgba(44, 124, 224, 0.7);
+  border-radius: 50%;
+}
+
+.infographics__item_animated {
+  padding: 31px;
+  border: none;
+}
+
+.infographics__item_animated::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 315px;
+  height: 315px;
+  z-index: -1;
+  background: url(../img/blue-circle.png) no-repeat center;
+  background-size: contain;
+  -webkit-animation: rotation-right 2s linear infinite;
+          animation: rotation-right 2s linear infinite;
+}
+
+.infographics__item:last-child .infographics__wrapper {
+  padding: 30px;
+}
+
+.infographics .infographics__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(22, 85, 163, 0.05);
+}
+
+.infographics__pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.infographics__pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.infographics__suptitle {
+  margin-bottom: 4px;
+}
+
+.infographics__title {
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #E85412;
+  margin-bottom: 4px;
+}
+
+.infographics__text {
+  text-align: center;
+}
+
+@-webkit-keyframes rotation-right {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation-right {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .gradient-swiper {
   position: relative;
   width: 100%;
@@ -1254,9 +1397,10 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 850px;
 }
 
-.contacts__map iframe {
+.contacts__map img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .contacts__title {
@@ -1419,49 +1563,5 @@ h1, h2, h3, h4, h5, h6, p {
   border-bottom: 1px solid transparent;
   -webkit-transition: .2s linear;
   transition: .2s linear;
-}
-
-.ymaps-2-1-78-balloon__layout {
-  overflow: auto !important;
-  border-radius: 3.03697px !important;
-}
-
-.ymaps-2-1-78-balloon__close {
-  display: none;
-}
-
-.ymaps-2-1-78-balloon__content {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.ymaps-2-1-78-balloon__tail {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-
-.map__balloon {
-  position: relative;
-  width: 117px;
-  padding: 6px 9px;
-}
-
-.map__balloon::before {
-  content: "";
-  position: absolute;
-  bottom: -9px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 23px;
-  height: 9px;
-  background: url(../img/tail.png) no-repeat center;
-  background-size: contain;
-}
-
-.map__logo {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
