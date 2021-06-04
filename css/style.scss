@@ -1439,10 +1439,24 @@ h1, h2, h3, h4, h5, h6 , p {
 }
 
 @media (max-width: 940px) {
+    .page-title {
+        font-size: 48px;
+    }
+    .section-title {
+        font-size: 36px;
+    }
     .header {
+        &__top {
+            margin-bottom: 0;
+        }
         &__bottom {
             display: none;
-        }    
+        }
+        &__search{
+            &.active {
+                width: 55%;
+            }  
+        } 
     }
     .burger-btn {
         display: block;
@@ -1455,11 +1469,259 @@ h1, h2, h3, h4, h5, h6 , p {
             object-fit: contain;
         }
     }
+    .gradient-swiper {
+        &__controls {
+            top: auto;
+            right: auto;
+            left: 17px;
+            bottom: 36px;
+        }
+        &__btn {
+            background: transparent;
+            path {
+                fill: $balck;
+            }
+        }
+    }
+    .gradient-slide {
+        padding: 36px 17px 88px;
+        &__bg {
+            width: 100%;
+            height: 100%;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .production {
+        &__content {
+            padding: 0;
+        }
+    }
+    .production-swiper {
+        &__slide {
+            padding: 72px 17px 172px 17px;
+        }
+        &__pagination {
+            width: auto !important;
+            left: 17px !important;
+            .swiper-pagination-bullet {
+                margin-bottom: 0 !important;
+            }
+        }
+        &__btns {
+            flex-direction: row;
+            right: 17px;
+        }
+        &__btn {
+            margin-bottom: 0;
+            margin-right: 12px;
+            transform: rotate(-90deg);
+            background: $white;
+            path {
+                fill: $blue;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .advantages-list {
+        &__item {
+            font-size: 24px;
+        }
+    }
     .news-card {
         height: 243px;
         &_with-pic {
             height: 341px;
         }
     }
+    .footer {
+        &__top {
+            flex-wrap: wrap;
+        }
+        &__col {
+            width: 45%;
+            margin-bottom: 30px;
+        }
+    } 
+}
 
+@media (max-width: 768px) {
+    .header {
+        &__mobile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+    }
+    .mobile-menu {
+        width: 100%;
+        height: 100vh;
+        background: $white;
+        color: $blue;
+        padding: 30px 17px;
+        transform: translate(100%);
+        &__wrapper {
+            position: relative;
+        }
+        &__close {
+            position: absolute;
+            top: 0;
+            right: 17px;
+        }
+        .nav__list {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .nav__list-item {
+            padding: 0;
+            margin-bottom: 16px;
+        }
+        .nav__list-link {
+            font-size: 20px;
+            color: $blue;
+        }
+    }
+    section {
+        position: relative;
+    }
+    .header__search {
+        position: absolute;
+        top: 95px;
+        left: 17px;
+        &.active {
+            width: calc(100% - 34px);
+        }
+    }
+    .section-title {
+        &__link {
+            position: absolute;
+            bottom: 15px;
+            left: 17px;
+            font-weight: 450;
+        }
+        &__text {
+            font-size: 20px;
+            line-height: 120%;
+        } 
+    }
+    .arrow-link {
+        &_bg {
+            padding-left: 0;
+            
+        }
+    }
+    .partners {
+        padding: 46px 0 32px;
+        &__title {
+            .section-title__link {
+                bottom: 198px;
+            }
+        }
+        &__text {
+            margin-bottom: 84px;
+        }
+        &__links {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__links-item {
+            width: 100%;
+            padding: 7px 0;
+            border-top: 1px solid rgba(29, 29, 27, 0.2);
+            &::after {
+                display: none;
+            } 
+        }
+    }
+    .infographics {
+        &__item {
+            width: 286px;
+            height: 286px;
+        }
+        &__item_animated {
+            padding: 20px;
+            &::before {
+                top: 5px;
+                left: 5px;
+                width: 276px;
+                height: 276px;
+            }
+            &::after {
+                top: -15px;
+                left: -15px;
+                width: 316px;
+                height: 316px;
+            }
+        }
+    }
+    
+    .news {
+        padding: 32px 0 88px;
+        &__title {
+            .section-title__link {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .news-card {
+        height: auto;
+        &__date {
+            margin-bottom: 26px;
+        }
+        &__title {
+            font-weight: 450;
+        }
+        &__overlay {
+            background: linear-gradient(0deg, #1655A3 2.94%, rgba(22, 85, 163, 0) 100%), 
+            radial-gradient(30.45% 29.91% at 0% 0%, rgba(22, 85, 163, 0.4) 0%, rgba(22, 85, 163, 0) 100%);
+        }
+    }
+    .news-swiper {
+        &__slide {
+            flex-wrap: wrap;
+        }
+        &__card {
+            width: 100%;
+            max-width: none;
+            margin-right: 0;
+            margin-bottom: 32px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .footer {
+        &__col {
+            width: 100%;
+        }
+        &__btn {
+            max-width: 341px;
+            margin: 0 auto;
+        }
+        &__contacts-title {
+            display: none;
+        }
+        &__contacts-item_email {
+            display: none;
+        }
+        &__bottom {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__copyright {
+            margin-bottom: 24px;
+        }
+        &__privacy {
+            margin-bottom: 40px;
+        }
+        &__logo {
+            margin-left: 0;
+        }
+    }
 }

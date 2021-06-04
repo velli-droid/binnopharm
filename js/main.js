@@ -53,6 +53,14 @@ if (verticalSwiperContainer) {
             nextEl: '.production-swiper__btn-next',
             prevEl: '.production-swiper__btn-prev',
         },
+        breakpoints: {
+            320: {
+                direction: 'horizontal',
+            },
+            941: {
+                direction: 'vertical',
+            },
+        }
     });
 
     function isVisible(elem) {
