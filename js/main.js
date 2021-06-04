@@ -32,9 +32,19 @@ if (gradientSwiperContainer) {
     });
 }
 
+// vertical swiper
+
 if (verticalSwiperContainer) {
-    const swiper = new Swiper('.production-swiper', {
+    const verticalSwiperSection = document.querySelector('.production');
+
+    const verticalSwiper = new Swiper('.production-swiper', {
         direction: 'vertical',
+        mousewheel: {
+            invert: false,
+            eventsTarget: verticalSwiperSection,
+            sensitivity: 5,
+            releaseOnEdges: true,
+        },
         pagination: {
             el: '.production-swiper__pagination',
             clickable: true,
@@ -44,11 +54,29 @@ if (verticalSwiperContainer) {
             prevEl: '.production-swiper__btn-prev',
         },
     });
+
+    function isVisible(elem) {
+        let coords = elem.getBoundingClientRect();
+        let windowHeight = document.documentElement.clientHeight;
+        let topVisible = coords.top > 0 && coords.top < windowHeight;
+        let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+
+        return topVisible || bottomVisible;
+    }
+
+    window.onscroll = function() {
+        if(isVisible(verticalSwiperSection)) {
+            verticalSwiper.mousewheel.enable();
+        } else {
+            verticalSwiper.mousewheel.disable();
+        }
+    }
+
 }
 
 if (newsSwiperContainer) {
     const newsSwiper = new Swiper('.news-swiper__container', {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 30,
         pagination: {
             el: '.news-swiper__pagination',
@@ -61,5 +89,6 @@ if (newsSwiperContainer) {
     });
 }
 
-// map
+
+
 

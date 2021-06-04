@@ -104,6 +104,9 @@ h1, h2, h3, h4, h5, h6 , p {
             visibility: visible;
         }
     }
+    &__mobile {
+        display: none;
+    }
     &_blue {
         background: $blue;
     }
@@ -195,6 +198,7 @@ h1, h2, h3, h4, h5, h6 , p {
         position: relative;
         padding: 0 24.4px;
         text-align: center;
+        line-height: 100%;
         &:first-child {
             padding-left: 0;
         }
@@ -273,7 +277,9 @@ h1, h2, h3, h4, h5, h6 , p {
     }
 }
 
-
+.burger-btn {
+    display: none;
+}
 
 // intro
 
@@ -416,6 +422,7 @@ h1, h2, h3, h4, h5, h6 , p {
 
 .infographics {
     padding: 85px 0 118px;
+    overflow: hidden;
     &__list {
         display: flex;
         justify-content: space-between;
@@ -672,7 +679,10 @@ h1, h2, h3, h4, h5, h6 , p {
     height: 100%;
     &__slide {
         position: relative;
-        padding: 72px 26px 0 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 72px 26px 172px 80px;
         z-index: 1;
     }
     &__bg {
@@ -707,11 +717,11 @@ h1, h2, h3, h4, h5, h6 , p {
             height: auto;
         }
     }
-    &__location {
-        margin-bottom: 154px;
+    &__text {
+        margin-top: auto;
     }
     &__list {
-        margin-top: 36px;
+        margin: 36px 0 auto;
     }
     &__pagination {
         top: auto !important;
@@ -914,6 +924,14 @@ h1, h2, h3, h4, h5, h6 , p {
 
 .news-swiper {
     padding: 48px 0 65px;
+    &__slide {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        width: 49%;
+        max-width: 660px;
+    }
     &__title {
         margin-bottom: 32px;
     }
@@ -929,6 +947,7 @@ h1, h2, h3, h4, h5, h6 , p {
             object-fit: cover;
         }
     }
+
     &__slide-title {
         font-weight: 600;
         font-size: 28px;
@@ -1267,4 +1286,180 @@ h1, h2, h3, h4, h5, h6 , p {
         border-bottom: 1px solid transparent;
         transition: .2s linear;
     }
+}
+
+// RESPONSIVE
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1384px;
+        padding: 0 17px;
+    }
+    .gradient-swiper {
+        .container {
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    body {
+        font-size: 20px;
+    }
+    .nav {
+        &__list-item {
+            padding: 0 15px;
+        }
+        &__list-link {
+            font-size: 17px;
+        }
+    }
+    .infographics {
+        &__list {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        &__item {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .news-card {
+        &__date {
+            font-size: 20px;
+        }
+        &__title {
+            font-size: 24px;
+        }
+    }
+    .news-swiper {
+        &__slide-title {
+            font-size: 24px;
+        }
+    }
+    .swiper-tags {
+        &__item {
+            font-size: 20px;
+        }
+    }
+    .footer {
+        &__btn-link {
+            display: block;
+            text-align: center;
+            padding: 13px 10px 15px;
+        }
+        &__col {
+            width: 24%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        &__search {
+            &.active {
+                width: 70%;
+            }
+        }
+    }
+    .logo {
+        max-width: 135px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .nav {
+        &__list-item {
+            padding: 0 10px;
+        }
+    }
+    .intro {
+        height: 862px;
+        &__inner {
+            padding-top: 262px;
+        }
+    }
+    .production {
+        &__swiper {
+            width: 50%;
+        }
+    }
+    .production-swiper {
+        &__slide {
+            padding: 72px 26px 172px 40px;
+        }
+        &__pagination {
+            left: 40px !important;
+        }
+        &__btns {
+            right: 26px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .production {
+        padding: 32px 0 844px;
+        height: auto;
+        &__content {
+            max-width: none;
+            width: 100%;
+        }
+        &__swiper {
+            top: auto;
+            bottom: 0;
+            width: 100%;
+            height: 812px;
+        }
+    }
+    .news{
+        &__content {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__col {
+            width: 100%;
+            max-width: none;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .news-card {
+        &_half-width {
+            width: 100%;
+            max-width: none;
+        }
+    }
+}
+
+@media (max-width: 940px) {
+    .header {
+        &__bottom {
+            display: none;
+        }    
+    }
+    .burger-btn {
+        display: block;
+        width: 40px;
+        height: 40px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .news-card {
+        height: 243px;
+        &_with-pic {
+            height: 341px;
+        }
+    }
+
 }
