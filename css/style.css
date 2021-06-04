@@ -1928,8 +1928,14 @@ h1, h2, h3, h4, h5, h6, p {
     background: #FFFFFF;
     color: #1655A3;
     padding: 30px 17px;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
     -webkit-transform: translate(100%);
             transform: translate(100%);
+  }
+  .mobile-menu.active {
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
   .mobile-menu__wrapper {
     position: relative;

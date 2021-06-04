@@ -1564,7 +1564,11 @@ h1, h2, h3, h4, h5, h6 , p {
         background: $white;
         color: $blue;
         padding: 30px 17px;
+        transition: .3s linear;
         transform: translate(100%);
+        &.active {
+            transform: translate(0);
+        }
         &__wrapper {
             position: relative;
         }

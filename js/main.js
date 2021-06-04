@@ -1,3 +1,16 @@
+// mobile menu
+const mobileMenu = document.querySelector('.mobile-menu');
+const burgerMenu = document.querySelector('.burger-btn');
+const mobileMenuClose = mobileMenu.querySelector('.mobile-menu__close');
+
+burgerMenu.onclick = function() {
+    mobileMenu.classList.toggle('active');
+}
+
+mobileMenuClose.onclick = function() {
+    mobileMenu.classList.toggle('active');
+}
+
 // search form
 const searchForm = document.querySelector('.header__search');
 const searchBtn = document.querySelector('.search-btn');
