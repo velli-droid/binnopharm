@@ -47,6 +47,9 @@
                                 En
                             </a>    
                         </div>
+                        <div class="side-btns__item burger-btn">
+                            <img src="img/burger.svg" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="header__bottom">
@@ -67,11 +70,11 @@
                                     Портфель препаратов
                                 </a>
                             </li>
-                            <li class="nav__list-item">
+                            <!-- <li class="nav__list-item">
                                 <a href="#" class="nav__list-link">
                                     Инвесторам
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="nav__list-item">
                                 <a href="#" class="nav__list-link">
                                     Карьера
@@ -95,14 +98,67 @@
                         </ul>
                     </nav>
                 </div>  
+                <div class="header__mobile mobile-menu">
+                    <div class="mobile-menu__wrapper">
+                        <nav class="header__nav nav mobile-menu__nav">
+                            <ul class="nav__list">
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Производство
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Портфель препаратов
+                                    </a>
+                                </li>
+                                <!-- <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Инвесторам
+                                    </a>
+                                </li> -->
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Карьера
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Социальная ответственность
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Пресс-служба
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="contacts.html" class="nav__list-link">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="mobile-menu__close">
+                            <img src="img/close.svg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
     <section class="intro">
         <div class="intro__bg">
             <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                <source src="video/intro.mov" type="video/mp4">
+                <source src="video/intro.mp4" type="video/mp4">
             </video>
+            <canvas class="canvas-video"></canvas>        
+            <div id="over_video"></div>
         </div>
         <div class="container">
             <div class="intro__inner">
@@ -110,7 +166,7 @@
                     <h1>Производство лекарственных препаратов всех форм выпуска по полному циклу</h1>
                 </div>
                 <div class="intro__bottom">
-                    <a href="#" class="arrow-link">
+                    <a href="https://sistema.ru/assets/binnopharm-group" class="arrow-link">
                         <div class="arrow-link__text">
                             Входит в ПАО АФК «Система»
                         </div>
@@ -203,7 +259,7 @@
                                 входит в
                             </div>
                             <div class="infographics__title">
-                                Топ 5
+                                ТОП-5
                             </div>
                             <div class="infographics__text">
                                 крупнейших отечественных <br>
@@ -223,7 +279,7 @@
                                 27 
                             </div>
                             <div class="infographics__text">
-                                млрд. руб. 
+                                млрд руб. &mdash;
                                 товарооборот 
                                 в 2020 году
                             </div>
@@ -273,34 +329,13 @@
                     </div>
                     <div class="gradient-slide__overlay"></div>
                     <div class="gradient-slide__date">
-                        Сегодня
+                        Завтра
                     </div>
                     <div class="gradient-slide__title section-title">
                         «Биннофарм Групп»
                     </div>
                     <div class="gradient-slide__text">
-                        Один из самых молодых и быстрорастущих игроков российского 
-                        фармацевтического рынка, крупнейший производитель антибиотиков, 
-                        лидер по выпуску экспортной продукции для стран СНГ.
-                    </div>
-                </div>   
-            </div>
-            <div class="swiper-slide gradient-slide">
-                <div class="container">
-                    <div class="gradient-slide__bg">
-                        <img src="img/swiper-bg.jpg" alt="">
-                    </div>
-                    <div class="gradient-slide__overlay"></div>
-                    <div class="gradient-slide__date">
-                        Сегодня
-                    </div>
-                    <div class="gradient-slide__title section-title">
-                        «Биннофарм Групп»
-                    </div>
-                    <div class="gradient-slide__text">
-                        Один из самых молодых и быстрорастущих игроков российского 
-                        фармацевтического рынка, крупнейший производитель антибиотиков, 
-                        лидер по выпуску экспортной продукции для стран СНГ.
+                        Крупнейшая фармацевтическая компания в Восточной Европе.
                     </div>
                 </div>  
             </div>
@@ -317,7 +352,7 @@
                         Объединяя 5 заводов в разных регионах России, «Биннофарм Групп» 
                         обладает самыми большими по площади производственными мощностями 
                         в стране. Предприятия компании выпускают продукцию всех существующих 
-                        форм - от таблеток и капсул до спреев, инъекций и суппозиториев.
+                        форм &mdash; от таблеток и капсул до спреев, инъекций и суппозиториев.
                     </div>
                     <a href="#" class="arrow-link production__link">
                         <div class="arrow-link__text">
@@ -394,7 +429,7 @@
                                 </div>
                                 <div class="production-swiper__text">
                                     Эффективное производство мелких и средних партий <br>
-                                    твердых форм <br>
+                                    твердых лекарственных форм <br>
                                     Высокотехнологичные формы выпуска <br>
                                     и способы покрытия таблеток
                                 </div>
@@ -495,7 +530,7 @@
                 <div class="partners__text">
                    <p>«Биннофарм Групп» - надежный партнер для дистрибуторов, 
                     аптечных сетей, технологических и научных организаций, 
-                    а так же финансовых структур.</p> <br>
+                    а также финансовых структур.</p> <br>
 
                     <p>Ключевыми принципами работы команды являются клиентоориентированность, 
                     нацеленность на результат, прозрачность 
@@ -643,52 +678,69 @@
                 <div class="news-swiper__container swiper-container">
                     <div class="swiper-wrapper news-swiper__wrapper">
                         <div class="swiper-slide news-swiper__slide">
-                            <div class="news-swiper__pic">
-                                <img src="img/news-swiper1.png" alt="">
-                            </div>
-                            <div class="news-swiper__tags swiper-tags">
-                                <div class="swiper-tags__item news-swiper__date">
-                                    16.01.2021
+                            <div class="news-swiper__card">
+                                <div class="news-swiper__pic">
+                                    <img src="img/news-swiper1.png" alt="">
                                 </div>
-                                <div class="swiper-tags__item">
-                                    <a href="#" class="swiper-tags__link">
-                                        Фотогалерея
-                                    </a>
+                                <div class="news-swiper__tags swiper-tags">
+                                    <div class="swiper-tags__item news-swiper__date">
+                                        16.01.2021
+                                    </div>
+                                    <div class="swiper-tags__item">
+                                        <a href="#" class="swiper-tags__link">
+                                            Фотогалерея
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-swiper__slide-title">
+                                    «Синтез» поздравил ветеранов здравоохранения Курганской области
                                 </div>
                             </div>
-                            <div class="news-swiper__slide-title">
-                                «Синтез» поздравил ветеранов здравоохранения Курганской области
+                            <div class="news-swiper__card">
+                                <div class="news-swiper__pic">
+                                    <img src="img/news-swipe2.png" alt="">
+                                </div>
+                                <div class="news-swiper__tags swiper-tags">
+                                    <div class="swiper-tags__item news-swiper__date">
+                                        16.01.2021
+                                    </div>
+                                </div>
+                                <div class="news-swiper__slide-title">
+                                    «Синтез» запустил производство препарата для лечения COVID-19 в Кургане
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide news-swiper__slide">
-                            <div class="news-swiper__pic">
-                                <img src="img/news-swipe2.png" alt="">
-                            </div>
-                            <div class="news-swiper__tags swiper-tags">
-                                <div class="swiper-tags__item news-swiper__date">
-                                    16.01.2021
+                            <div class="news-swiper__card">
+                                <div class="news-swiper__pic">
+                                    <img src="img/news-swiper1.png" alt="">
+                                </div>
+                                <div class="news-swiper__tags swiper-tags">
+                                    <div class="swiper-tags__item news-swiper__date">
+                                        16.01.2021
+                                    </div>
+                                    <div class="swiper-tags__item">
+                                        <a href="#" class="swiper-tags__link">
+                                            Фотогалерея
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-swiper__slide-title">
+                                    «Синтез» поздравил ветеранов здравоохранения Курганской области
                                 </div>
                             </div>
-                            <div class="news-swiper__slide-title">
-                                «Синтез» запустил производство препарата для лечения COVID-19 в Кургане
-                            </div>
-                        </div>
-                        <div class="swiper-slide news-swiper__slide">
-                            <div class="news-swiper__pic">
-                                <img src="img/news-swiper1.png" alt="">
-                            </div>
-                            <div class="news-swiper__tags swiper-tags">
-                                <div class="swiper-tags__item news-swiper__date">
-                                    16.01.2021
+                            <div class="news-swiper__card">
+                                <div class="news-swiper__pic">
+                                    <img src="img/news-swipe2.png" alt="">
                                 </div>
-                                <div class="swiper-tags__item">
-                                    <a href="#" class="swiper-tags__link">
-                                        Фотогалерея
-                                    </a>
+                                <div class="news-swiper__tags swiper-tags">
+                                    <div class="swiper-tags__item news-swiper__date">
+                                        16.01.2021
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="news-swiper__slide-title">
-                                «Синтез» поздравил ветеранов здравоохранения Курганской области
+                                <div class="news-swiper__slide-title">
+                                    «Синтез» запустил производство препарата для лечения COVID-19 в Кургане
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -780,7 +832,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="footer__contacts-item">
+                            <div class="footer__contacts-item footer__contacts-item_email">
                                 <div class="footer__contacts-icon">
                                     <img src="img/mail.png" alt="Емайл">
                                 </div>
