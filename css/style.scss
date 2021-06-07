@@ -1425,7 +1425,7 @@ h1, h2, h3, h4, h5, h6 , p {
 
 @media (max-width: 1023px) {
     .production {
-        padding: 32px 0 30px;
+        padding: 32px 0 0;
         height: auto;
         &__inner {
             flex-direction: column;
