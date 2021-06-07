@@ -45,58 +45,6 @@ if (gradientSwiperContainer) {
     });
 }
 
-// vertical swiper
-
-if (verticalSwiperContainer) {
-    const verticalSwiperSection = document.querySelector('.production');
-
-    const verticalSwiper = new Swiper('.production-swiper', {
-        direction: 'vertical',
-        touchReleaseOnEdges: true,
-        mousewheel: {
-            invert: false,
-            eventsTarget: verticalSwiperSection,
-            sensitivity: 5,
-            releaseOnEdges: true,
-        },
-        pagination: {
-            el: '.production-swiper__pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.production-swiper__btn-next',
-            prevEl: '.production-swiper__btn-prev',
-        },
-        // breakpoints: {
-        //     320: {
-        //         direction: 'horizontal',
-        //     },
-        //     941: {
-        //         direction: 'vertical',
-        //     },
-        // }
-    });
-
-    function isVisible(elem) {
-        let coords = elem.getBoundingClientRect();
-
-        let windowHeight = document.documentElement.clientHeight;
-        // let topVisible = coords.top > 0 && coords.top < windowHeight;
-        let bottomVisible = (coords.bottom / 2) < windowHeight && (coords.bottom / 2) > 0;
-
-        return bottomVisible;
-    }
-
-    window.onscroll = function() {
-        if(isVisible(verticalSwiperSection)) {
-            verticalSwiper.mousewheel.enable();
-        } else {
-            verticalSwiper.mousewheel.disable();
-        }
-    }
-
-}
-
 if (newsSwiperContainer) {
     const newsSwiper = new Swiper('.news-swiper__container', {
         slidesPerView: 1,

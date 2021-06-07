@@ -157,8 +157,6 @@
             <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                 <source src="video/intro.mp4" type="video/mp4">
             </video>
-            <canvas class="canvas-video"></canvas>        
-            <div id="over_video"></div>
         </div>
         <div class="container">
             <div class="intro__inner">
@@ -342,170 +340,159 @@
         </div>
     </div>
     <section class="production">
-        <div class="container">
-            <div class="production__inner">
-                <div class="production__content">
-                    <div class="production__title section-title">
-                        <h2>Производство</h2>
+        <div class="production__inner">
+            <div class="production__fixed">
+                <div class="container">
+                    <div class="production__content">
+                        <div class="production__title section-title">
+                            <h2>Производство</h2>
+                        </div>
+                        <div class="production__text">
+                            Объединяя 5 заводов в разных регионах России, «Биннофарм Групп» 
+                            обладает самыми большими по площади производственными мощностями 
+                            в стране. Предприятия компании выпускают продукцию всех существующих 
+                            форм &mdash; от таблеток и капсул до спреев, инъекций и суппозиториев.
+                        </div>
+                        <a href="#" class="arrow-link production__link">
+                            <div class="arrow-link__text">
+                                Подробнее о Производстве
+                            </div>
+                            <div class="arrow-link__icon">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 0V2H11.59L0 13.59L1.41 15L13 3.41V10H15V0H5Z" fill="white"/>
+                                </svg>        
+                            </div>
+                        </a>
                     </div>
-                    <div class="production__text">
-                        Объединяя 5 заводов в разных регионах России, «Биннофарм Групп» 
-                        обладает самыми большими по площади производственными мощностями 
-                        в стране. Предприятия компании выпускают продукцию всех существующих 
-                        форм &mdash; от таблеток и капсул до спреев, инъекций и суппозиториев.
+                </div>
+            </div>
+            <div class="production__swiper">
+                <div class="production-swiper">
+                    <div class="production-swiper__wrapper">
+                        <div class="production-swiper__slide">
+                            <div class="production-swiper__bg">
+                                <img src="img/vertical-swiper1.jpg" alt="">
+                            </div>
+                            <div class="production-swiper__overlay"></div>
+                            <div class="production-swiper__logo">
+                                <img src="img/vertical-swiper-logo.png" alt="">
+                            </div>
+                            <div class="production-swiper__location">
+                                п. Оболенск Московской области
+                            </div>
+                            <div class="production-swiper__text">
+                                Современное производство твердых лекарственных форм <br>
+                                (таблетки, капсулы, саше)
+                            </div>
+                            <div class="production-swiper__list advantages-list">
+                                <div class="advantages-list__item">
+                                    25 000 м² производственных площадей
+                                </div>
+                                <div class="advantages-list__item">
+                                    Более 550 сотрудников
+                                </div>
+                            </div>
+                        </div>
+                        <div class="production-swiper__slide">
+                            <div class="production-swiper__bg">
+                                <img src="img/vertical-swiper5.jpg" alt="">
+                            </div>
+                            <div class="production-swiper__overlay"></div>
+                            <div class="production-swiper__logo">
+                                <img src="img/vertical-swiper-logo2.png" alt="">
+                            </div>
+                            <div class="production-swiper__location">
+                                г. Курган
+                            </div>
+                            <div class="production-swiper__text">
+                                Производство антибиотиков, медицинских изделий <br>
+                                Собственный синтез субстанций
+                            </div>
+                            <div class="production-swiper__list advantages-list">
+                                <div class="advantages-list__item">
+                                    640 000 м² производственных площадей
+                                </div>
+                                <div class="advantages-list__item">
+                                    Более 3 000 сотрудников
+                                </div>
+                            </div>
+                        </div>
+                        <div class="production-swiper__slide">
+                            <div class="production-swiper__bg">
+                                <img src="img/vertical-swiper4.jpg" alt="">
+                            </div>
+                            <div class="production-swiper__overlay"></div>
+                            <div class="production-swiper__logo">
+                                <img src="img/vertical-swiper-logo3.png" alt="">
+                            </div>
+                            <div class="production-swiper__location">
+                                г. Ставрополь
+                            </div>
+                            <div class="production-swiper__text">
+                                Эффективное производство мелких и средних партий <br>
+                                твердых лекарственных форм <br>
+                                Высокотехнологичные формы выпуска <br>
+                                и способы покрытия таблеток
+                            </div>
+                            <div class="production-swiper__list advantages-list">
+                                <div class="advantages-list__item">
+                                    2 000 м² производственных площадей
+                                </div>
+                                <div class="advantages-list__item">
+                                    Более 145 сотрудников
+                                </div>
+                            </div>
+                        </div>
+                        <div class="production-swiper__slide">
+                            <div class="production-swiper__bg">
+                                <img src="img/vertical-swiper3.jpg" alt="">
+                            </div>
+                            <div class="production-swiper__overlay"></div>
+                            <div class="production-swiper__logo">
+                                <img src="img/vertical-swiper-logo4.png" alt="">
+                            </div>
+                            <div class="production-swiper__location">
+                                г. Зеленоград
+                            </div>
+                            <div class="production-swiper__text">
+                                Инновационное производство <br>
+                                биотехнологических препаратов и аэрозолей
+                            </div>
+                            <div class="production-swiper__list advantages-list">
+                                <div class="advantages-list__item">
+                                    28 700 м² производственных площадей
+                                </div>
+                                <div class="advantages-list__item">
+                                    Более 300 сотрудников
+                                </div>
+                            </div>
+                        </div>
+                        <div class="production-swiper__slide">
+                            <div class="production-swiper__bg">
+                                <img src="img/vertical-swiper2.jpg" alt="">
+                            </div>
+                            <div class="production-swiper__overlay"></div>
+                            <div class="production-swiper__logo">
+                                <img src="img/vertical-swiper-logo4.png" alt="">
+                            </div>
+                            <div class="production-swiper__location">
+                                г. Красногорск
+                            </div>
+                            <div class="production-swiper__text">
+                                Производство объемных инфузионных растворов <br>
+                                в центральной части страны
+                            </div>
+                            <div class="production-swiper__list advantages-list">
+                                <div class="advantages-list__item">
+                                    8 300 м² производственных площадей
+                                </div>
+                                <div class="advantages-list__item">
+                                    Более 100 сотрудников
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="arrow-link production__link">
-                        <div class="arrow-link__text">
-                            Подробнее о Производстве
-                        </div>
-                        <div class="arrow-link__icon">
-                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 0V2H11.59L0 13.59L1.41 15L13 3.41V10H15V0H5Z" fill="white"/>
-                            </svg>        
-                        </div>
-                    </a>
-                </div>
-                <div class="production__swiper">
-                    <div class="production-swiper swiper-container">
-                        <div class="swiper-wrapper production-swiper__wrapper">
-                            <div class="swiper-slide production-swiper__slide">
-                                <div class="production-swiper__bg">
-                                    <img src="img/vertical-swiper1.jpg" alt="">
-                                </div>
-                                <div class="production-swiper__overlay"></div>
-                                <div class="production-swiper__logo">
-                                    <img src="img/vertical-swiper-logo.png" alt="">
-                                </div>
-                                <div class="production-swiper__location">
-                                    п. Оболенск Московской области
-                                </div>
-                                <div class="production-swiper__text">
-                                    Современное производство твердых лекарственных форм <br>
-                                    (таблетки, капсулы, саше)
-                                </div>
-                                <div class="production-swiper__list advantages-list">
-                                    <div class="advantages-list__item">
-                                        25 000 м² производственных площадей
-                                    </div>
-                                    <div class="advantages-list__item">
-                                        Более 550 сотрудников
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide production-swiper__slide">
-                                <div class="production-swiper__bg">
-                                    <img src="img/vertical-swiper5.jpg" alt="">
-                                </div>
-                                <div class="production-swiper__overlay"></div>
-                                <div class="production-swiper__logo">
-                                    <img src="img/vertical-swiper-logo2.png" alt="">
-                                </div>
-                                <div class="production-swiper__location">
-                                    г. Курган
-                                </div>
-                                <div class="production-swiper__text">
-                                    Производство антибиотиков, медицинских изделий <br>
-                                    Собственный синтез субстанций
-                                </div>
-                                <div class="production-swiper__list advantages-list">
-                                    <div class="advantages-list__item">
-                                        640 000 м² производственных площадей
-                                    </div>
-                                    <div class="advantages-list__item">
-                                        Более 3 000 сотрудников
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide production-swiper__slide">
-                                <div class="production-swiper__bg">
-                                    <img src="img/vertical-swiper4.jpg" alt="">
-                                </div>
-                                <div class="production-swiper__overlay"></div>
-                                <div class="production-swiper__logo">
-                                    <img src="img/vertical-swiper-logo3.png" alt="">
-                                </div>
-                                <div class="production-swiper__location">
-                                    г. Ставрополь
-                                </div>
-                                <div class="production-swiper__text">
-                                    Эффективное производство мелких и средних партий <br>
-                                    твердых лекарственных форм <br>
-                                    Высокотехнологичные формы выпуска <br>
-                                    и способы покрытия таблеток
-                                </div>
-                                <div class="production-swiper__list advantages-list">
-                                    <div class="advantages-list__item">
-                                        2 000 м² производственных площадей
-                                    </div>
-                                    <div class="advantages-list__item">
-                                        Более 145 сотрудников
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide production-swiper__slide">
-                                <div class="production-swiper__bg">
-                                    <img src="img/vertical-swiper3.jpg" alt="">
-                                </div>
-                                <div class="production-swiper__overlay"></div>
-                                <div class="production-swiper__logo">
-                                    <img src="img/vertical-swiper-logo4.png" alt="">
-                                </div>
-                                <div class="production-swiper__location">
-                                    г. Зеленоград
-                                </div>
-                                <div class="production-swiper__text">
-                                    Инновационное производство <br>
-                                    биотехнологических препаратов и аэрозолей
-                                </div>
-                                <div class="production-swiper__list advantages-list">
-                                    <div class="advantages-list__item">
-                                        28 700 м² производственных площадей
-                                    </div>
-                                    <div class="advantages-list__item">
-                                        Более 300 сотрудников
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide production-swiper__slide">
-                                <div class="production-swiper__bg">
-                                    <img src="img/vertical-swiper2.jpg" alt="">
-                                </div>
-                                <div class="production-swiper__overlay"></div>
-                                <div class="production-swiper__logo">
-                                    <img src="img/vertical-swiper-logo4.png" alt="">
-                                </div>
-                                <div class="production-swiper__location">
-                                    г. Красногорск
-                                </div>
-                                <div class="production-swiper__text">
-                                    Производство объемных инфузионных растворов <br>
-                                    в центральной части страны
-                                </div>
-                                <div class="production-swiper__list advantages-list">
-                                    <div class="advantages-list__item">
-                                        8 300 м² производственных площадей
-                                    </div>
-                                    <div class="advantages-list__item">
-                                        Более 100 сотрудников
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="production-swiper__pagination swiper-pagination"></div>
-                        <div class="production-swiper__btns">
-                            <div class="production-swiper__btn-prev production-swiper__btn">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.8 9.26665L16.296 10.7707L10.3333 4.81865L10.3333 17.8L8.19999 17.8L8.19999 4.81865L2.23732 10.7707L0.733321 9.26665L9.26665 0.73332L17.8 9.26665Z" fill="white"/>
-                                </svg>     
-                            </div>
-                            <div class="production-swiper__btn-next production-swiper__btn">
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.8 8.73335L16.296 7.22935L10.3333 13.1813L10.3333 0.200012L8.19999 0.200012L8.19999 13.1813L2.23732 7.22935L0.73332 8.73335L9.26665 17.2667L17.8 8.73335Z" fill="white"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>   
-                </div>
+                </div>   
             </div>
         </div>
     </section>

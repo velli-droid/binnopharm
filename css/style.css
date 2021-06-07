@@ -1,18 +1,18 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Futura PT';
-  src: url("../fonts/futura_pt_demi.eot");
-  src: url("../fonts/futura_pt_demi.eot?#iefix") format("embedded-opentype"), url("../fonts/futura_pt_demi.woff2") format("woff2"), url("../fonts/futura_pt_demi.woff") format("woff"), url("../fonts/futura_pt_demi.ttf") format("truetype"), url("../fonts/futura_pt_demi.svg#futura_pt_demi") format("svg");
-  font-weight: 600;
+  src: url("../fonts/futura_pt_medium.eot");
+  src: url("../fonts/futura_pt_medium.eot") format("embedded-opentype"), url("../fonts/futura_pt_medium.woff2") format("woff2"), url("../fonts/futura_pt_medium.woff") format("woff"), url("../fonts/futura_pt_medium.ttf") format("truetype"), url("../fonts/futura_pt_medium.svg#futura_pt_medium") format("svg");
+  font-weight: 450;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Futura PT';
-  src: url("../fonts/futura_pt_medium.eot");
-  src: url("../fonts/futura_pt_medium.eot?#iefix") format("embedded-opentype"), url("../fonts/futura_pt_medium.woff2") format("woff2"), url("../fonts/futura_pt_medium.woff") format("woff"), url("../fonts/futura_pt_medium.ttf") format("truetype"), url("../fonts/futura_pt_medium.svg#futura_pt_medium") format("svg");
-  font-weight: 450;
+  src: url("../fonts/futura_pt_demi.eot");
+  src: url("../fonts/futura_pt_demi.eot") format("embedded-opentype"), url("../fonts/futura_pt_demi.woff2") format("woff2"), url("../fonts/futura_pt_demi.woff") format("woff"), url("../fonts/futura_pt_demi.ttf") format("truetype"), url("../fonts/futura_pt_demi.svg#futura_pt_demi") format("svg");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -811,16 +811,33 @@ h1, h2, h3, h4, h5, h6, p {
 
 .production {
   position: relative;
-  height: 100vh;
   background: #297BE1;
   color: #FFFFFF;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
 }
 
 .production__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: inherit;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.production__fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .production__content {
@@ -837,10 +854,8 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  min-width: 45%;
+  height: 100vh;
   max-width: 494px;
-  padding: 0 72px 0 27px;
-  height: inherit;
 }
 
 .production__title {
@@ -852,10 +867,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .production__swiper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 55%;
+  width: 50%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   height: inherit;
 }
 
@@ -876,6 +890,7 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100vh;
   padding: 72px 26px 172px 80px;
   z-index: 1;
 }
@@ -1790,18 +1805,29 @@ h1, h2, h3, h4, h5, h6, p {
 
 @media (max-width: 1023px) {
   .production {
-    padding: 32px 0 844px;
+    padding: 32px 0 30px;
     height: auto;
+  }
+  .production__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .production__fixed {
+    position: static;
   }
   .production__content {
     max-width: none;
     width: 100%;
+    height: auto;
+    margin-bottom: 32px;
   }
   .production__swiper {
     top: auto;
     bottom: 0;
     width: 100%;
-    height: 812px;
+    height: auto;
   }
   .news__content {
     -ms-flex-wrap: wrap;
@@ -1953,15 +1979,6 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .production-swiper__slide {
     padding: 72px 17px 172px 17px;
-  }
-  .production-swiper__btns {
-    right: 17px;
-  }
-  .production-swiper__btn {
-    background: #FFFFFF;
-  }
-  .production-swiper__btn path {
-    fill: #1655A3;
   }
   .advantages-list__item {
     font-size: 24px;

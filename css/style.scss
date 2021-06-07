@@ -1,25 +1,26 @@
 @font-face {
-	font-family: 'Futura PT';
-	src: url('../fonts/futura_pt_demi.eot'); 
-	src: url('../fonts/futura_pt_demi.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/futura_pt_demi.woff2') format('woff2'), 
-		url('../fonts/futura_pt_demi.woff') format('woff'), 
-		url('../fonts/futura_pt_demi.ttf') format('truetype'),
-		url('../fonts/futura_pt_demi.svg#futura_pt_demi') format('svg'); 
-    font-weight: 600;
+    font-family: 'Futura PT';
+    src: url('../fonts/futura_pt_medium.eot');
+    src: url('../fonts/futura_pt_medium.eot') format('embedded-opentype'),
+         url('../fonts/futura_pt_medium.woff2') format('woff2'),
+         url('../fonts/futura_pt_medium.woff') format('woff'),
+         url('../fonts/futura_pt_medium.ttf') format('truetype'),
+         url('../fonts/futura_pt_medium.svg#futura_pt_medium') format('svg');
+    font-weight: 450;
     font-style: normal;
     font-display: swap;
 }
 
+
 @font-face {
-	font-family: 'Futura PT';
-	src: url('../fonts/futura_pt_medium.eot'); 
-	src: url('../fonts/futura_pt_medium.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/futura_pt_medium.woff2') format('woff2'), 
-		url('../fonts/futura_pt_medium.woff') format('woff'), 
-		url('../fonts/futura_pt_medium.ttf') format('truetype'), 
-		url('../fonts/futura_pt_medium.svg#futura_pt_medium') format('svg');
-    font-weight: 450;
+    font-family: 'Futura PT';
+    src: url('../fonts/futura_pt_demi.eot');
+    src: url('../fonts/futura_pt_demi.eot') format('embedded-opentype'),
+         url('../fonts/futura_pt_demi.woff2') format('woff2'),
+         url('../fonts/futura_pt_demi.woff') format('woff'),
+         url('../fonts/futura_pt_demi.ttf') format('truetype'),
+         url('../fonts/futura_pt_demi.svg#futura_pt_demi') format('svg');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -643,22 +644,29 @@ h1, h2, h3, h4, h5, h6 , p {
 
 .production {
     position: relative;
-    height: 100vh;
     background: $light-blue;
     color: $white;
+    transition: .3s linear;
     &__inner {
         display: flex;
-        height: inherit;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__fixed {
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-self: flex-start;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        min-width: 45%;
+        height: 100vh;
         max-width: 494px;
-        padding: 0 72px 0 27px;
-        height: inherit;
     }
     &__title {
         margin-bottom: 24px;
@@ -667,10 +675,8 @@ h1, h2, h3, h4, h5, h6 , p {
         margin-bottom: 32px;
     }
     &__swiper {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 55%;
+        width: 50%;
+        align-self: flex-end;
         height: inherit;
     }
 }
@@ -683,6 +689,7 @@ h1, h2, h3, h4, h5, h6 , p {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: 100vh;
         padding: 72px 26px 172px 80px;
         z-index: 1;
     }
@@ -1418,17 +1425,25 @@ h1, h2, h3, h4, h5, h6 , p {
 
 @media (max-width: 1023px) {
     .production {
-        padding: 32px 0 844px;
+        padding: 32px 0 30px;
         height: auto;
+        &__inner {
+            flex-direction: column;
+        }
+        &__fixed {
+            position: static;
+        }
         &__content {
             max-width: none;
             width: 100%;
+            height: auto;
+            margin-bottom: 32px;
         }
         &__swiper {
             top: auto;
             bottom: 0;
             width: 100%;
-            height: 812px;
+            height: auto;
         }
     }
     .news{
@@ -1580,29 +1595,6 @@ h1, h2, h3, h4, h5, h6 , p {
     .production-swiper {
         &__slide {
             padding: 72px 17px 172px 17px;
-        }
-        // &__pagination {
-        //     width: auto !important;
-        //     left: 17px !important;
-        //     .swiper-pagination-bullet {
-        //         margin-bottom: 0 !important;
-        //     }
-        // }
-        &__btns {
-            // flex-direction: row;
-            right: 17px;
-        }
-        &__btn {
-            // margin-bottom: 0;
-            // margin-right: 12px;
-            // transform: rotate(-90deg);
-            background: $white;
-            path {
-                fill: $blue;
-            }
-            // &:last-child {
-            //     margin-right: 0;
-            // }
         }
     }
     .advantages-list {
