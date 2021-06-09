@@ -2085,6 +2085,83 @@ h1, h2, h3, h4, h5, h6, p {
   padding-left: 25px;
 }
 
+.interactive-map__pic {
+  position: absolute;
+  top: 83px;
+  right: 0;
+  width: 50%;
+  max-width: 568px;
+}
+
+.interactive-map__pic svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.map-balloon {
+  position: absolute;
+  top: -10px;
+  width: 434px;
+  padding: 29px 32px 44px;
+  -webkit-box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.05);
+  background: #FFFFFF;
+  color: #1D1D1B;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.map-balloon__logo {
+  width: 180px;
+  margin-bottom: 14px;
+}
+
+.map-balloon__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-balloon__location {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 4px;
+}
+
+.map-balloon__text {
+  font-size: 18px;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+.map-balloon .advantages-list__item_balloon {
+  color: #1D1D1B;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  margin-bottom: 17px;
+}
+
+.map-balloon .advantages-list__item_balloon:last-child {
+  margin-bottom: 0;
+}
+
+.map-balloon .advantages-list__item_balloon::before {
+  height: 17px;
+  background: #1D1D1B;
+}
+
+.map-group area:hover ~ .map-balloon {
+  visibility: visible;
+  opacity: 1;
+}
+
 .square-list {
   display: -webkit-box;
   display: -ms-flexbox;
