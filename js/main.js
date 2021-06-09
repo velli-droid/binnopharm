@@ -61,5 +61,51 @@ if (newsSwiperContainer) {
 }
 
 
+// tabs 
 
+function tabs(str) {
+    const tabsEl = document.querySelector(str);
+    if(tabsEl) {
+        const tabsLinks = tabsEl.querySelectorAll('.tabs__link');
+        const tabsPanes = tabsEl.querySelectorAll('.tabs__pane');
 
+        function setPaneFade(el) {
+            el.classList.add('fade');
+        }
+        function setPaneShow(el) {
+            el.classList.add('show');
+        }
+        function removePaneShow(el) {
+            el.classList.remove('show');
+        }
+        function removePaneFade(el) {
+            el.classList.remove('fade');
+        }
+        function showPane(el) {
+            setPaneFade(el);
+            setTimeout(setPaneShow, 0, el)
+        }
+        function hidePane(el) {
+            removePaneShow(el);
+            removePaneFade(el);
+        }
+
+        for(let i = 0; i < tabsLinks.length; i++) {
+            tabsLinks[i].onclick = function(event) {
+                tabsLinks.forEach(element => {
+                    element.classList.remove('active');
+                });
+                tabsPanes.forEach(element => {
+                    hidePane(element);
+                });
+                event.preventDefault();
+                const tabsLinkHref = tabsLinks[i].getAttribute('href').slice(1);
+                const activePane = document.getElementById(tabsLinkHref);
+                showPane(activePane);
+                tabsLinks[i].classList.add('active');
+            }
+        }
+    }
+}
+
+tabs('.team__tabs');

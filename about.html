@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>«Биннофарм Групп»</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__top">
+                    <div class="header__logo logo">
+                        <a href="/" class="logo__link">
+                            <img src="img/logo.png" alt="Лого">
+                        </a>
+                    </div>
+                    <form class="header__search search-form">
+                        <div class="form-group">
+                            <input type="text" id="page-search" name="search" class="form-input search-form__input" placeholder=" " autocomplete="off">
+                            <label for="page-search" class="form-label search-form__label">
+                                Поиск по сайту...
+                            </label>
+                            <button type="submit" class="form-submit search-form__submit">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="#1655A3"/>
+                                </svg>                                    
+                            </button>
+                            <div class="search-form__close">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#1D1D1B" fill-opacity="0.8"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="header__side-btns side-btns">
+                        <div class="side-btns__item search-btn">
+                            <a href="#" class="side-btns__link search-btn__link">
+                                <img src="img/search-loupe.svg" alt="Поиск">
+                            </a>    
+                        </div>
+                        <!-- <div class="side-btns__item page-lang">
+                            <a href="#" class="side-btns__link page-lang__link">
+                                En
+                            </a>    
+                        </div> -->
+                        <div class="side-btns__item burger-btn">
+                            <img src="img/burger.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li class="nav__list-item">
+                                <a href="about.html" class="nav__list-link">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Производство
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Портфель препаратов
+                                </a>
+                            </li>
+                            <!-- <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Инвесторам
+                                </a>
+                            </li> -->
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Карьера
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Социальная ответственность
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__list-link">
+                                    Пресс-служба
+                                </a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="contacts.html" class="nav__list-link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>  
+                <div class="header__mobile mobile-menu">
+                    <div class="mobile-menu__wrapper">
+                        <nav class="header__nav nav mobile-menu__nav">
+                            <ul class="nav__list">
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Производство
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Портфель препаратов
+                                    </a>
+                                </li>
+                                <!-- <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Инвесторам
+                                    </a>
+                                </li> -->
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Карьера
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Социальная ответственность
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="#" class="nav__list-link">
+                                        Пресс-служба
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="contacts.html" class="nav__list-link">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="mobile-menu__close">
+                            <img src="img/close.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="intro intro_about">
+        <div class="intro__bg">
+            <img src="img/about-bg.jpg" alt="">
+        </div>
+        <div class="intro__overlay"></div>
+        <div class="container">
+            <div class="intro__inner intro__inner_about">
+                <div class="page-title intro__title_about">
+                    <h1>О компании</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery__inner">
+                <div class="gallery__text">
+                    <p>Фармацевтическая компания «Биннофарм Групп» входит в топ-5 российских производителей лекарственных средств.</p>
+                    <p>Цель «Биннофарм Групп» - обеспечить потребителей качественными и доступными по цене лекарствами, изготовленными в соответствии со стандартами GMP.</p>
+                    <p>В компании работают более 4 500 специалистов, выпускающих широкий спектр лекарственных препаратов в различных 
+                    готовых лекарственных формах для розничного и госпитального сегментов, где компания занимает ведущие позиции. 
+                    В портфеле компании 450 регистрационных удостоверений, 100 препаратов включены в перечень ЖНВЛП.</p>
+                    <p>«Биннофарм Групп» является лидером по производству антибиотиков среди российских фармкомпаний.</p>
+                </div>
+                <div class="gallery__pics gallery-pics">
+                    <div class="gallery-pics__item">
+                        <img src="img/gallery1.png" alt="">
+                    </div>
+                    <div class="gallery-pics__item">
+                        <img src="img/gallery2.png" alt="">
+                    </div>
+                    <div class="gallery-pics__item">
+                        <img src="img/gallery3.png" alt="">
+                    </div>
+                    <div class="gallery-pics__item">
+                        <img src="img/gallery4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blue-bg">
+        <div class="container">
+            <div class="blue-bg__inner">
+                <div class="blue-bg__text">
+                    <p>Команда медицинских и фармацевтических представителей обеспечивает продвижение продукции во всех регионах России. 
+                    Также препараты производства «Биннофарм Групп» поставляются в 14 стран. «Биннофарм Групп» занимает первое место 
+                    среди российских производителей по экспорту в страны СНГ.</p>
+                    <p>Ключевые преимущества «Биннофарм Групп»: обширная экспертиза, современные технологические решения, 
+                    диверсифицированный и сбалансированный портфель препаратов, широкое присутствие в различных сегментах фармацевтического рынка.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team">
+        <div class="container">
+            <div class="team__inner">
+                <div class="team__tabs tabs">
+                    <div class="tabs__aside">
+                        <div class="section-title team__title">
+                            <h2>Команда</h2>
+                        </div>
+                        <div class="tabs__nav">
+                            <a href="#content-1" class="tabs__link active">
+                                Менеджемент
+                            </a>
+                            <a href="#content-2" class="tabs__link">
+                                Совет директоров
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tabs__content">
+                        <div class="tabs__content-top tabs-top">
+                            <div class="tabs-top__pic team-pic">
+                                <img src="img/team1.png" alt="">
+                            </div>
+                            <div class="tabs-top__content">
+                                <div class="tabs-top__name">
+                                    Муратов Рустем Булатович
+                                </div>
+                                <div class="tabs-top__position">
+                                    Генеральный директор «Биннофарм Групп»
+                                </div>
+                                <div class="tabs-top__link">
+                                    <a href="#" class="arrow-link arrow-link_blue">
+                                        <div class="arrow-link__text">
+                                            Подробнее
+                                        </div>
+                                        <div class="arrow-link__icon">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 0V2H11.59L0 13.59L1.41 15L13 3.41V10H15V0H5Z" fill="white"/>
+                                            </svg>        
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs__pane show fade" id="content-1">
+                            <div class="team-list">
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team2.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Касакина <br>
+                                        Елена Константиновна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Заместитель генерального директора по 
+                                        производственной деятельности «Биннофарм Групп»
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team3.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Славгородская <br>
+                                        Екатерина Владимировна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по продажам и продвижению
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team4.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Чупин <br>
+                                        Алексей Николаевич
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по разработкам и регистрации
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team5.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Багаутдинова <br>
+                                        Элина Асхатовна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Финансовый директор
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team6.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Петров <br>
+                                        Игорь Олегович
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по корпоративному управлению и трансформации бизнеса
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team13.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Фомина <br>
+                                        Анна Александровна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по внешнеэкономической деятельности
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team7.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Богомолова <br>
+                                        Мария Михайловна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по маркетингу
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team8.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Федченко <br>
+                                        Татьяна Анатольевна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по персоналу и организационному развитию
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team9.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Шипилова <br>
+                                        Елена Владиславовна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по связям с общественностью
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team10.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Зайцев <br>
+                                        Евгений Павлович
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по IT и автоматизации бизнес-процессов
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team11.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Комаров <br>
+                                        Сергей Сергеевич
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по планированию и бизнес-анализу
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team12.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Оратовский <br>
+                                        Валерий Валерьевич
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по обеспечению тендерной и закупочной деятельности
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs__pane" id="content-2">
+                            <div class="team-list">
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team5.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Багаутдинова <br>
+                                        Элина Асхатовна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Финансовый директор
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team6.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Петров <br>
+                                        Игорь Олегович
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по корпоративному управлению и трансформации бизнеса
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team13.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Фомина <br>
+                                        Анна Александровна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по внешнеэкономической деятельности
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team2.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Касакина <br>
+                                        Елена Константиновна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Заместитель генерального директора по 
+                                        производственной деятельности «Биннофарм Групп»
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team3.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Славгородская <br>
+                                        Екатерина Владимировна
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по продажам и продвижению
+                                    </div>
+                                </div>
+                                <div class="team-list__item">
+                                    <div class="team-list__pic team-pic">
+                                        <img src="img/team4.png" alt="">
+                                    </div>
+                                    <div class="team-list__name">
+                                        Чупин <br>
+                                        Алексей Николаевич
+                                    </div>
+                                    <div class="team-list__position">
+                                        Директор по разработкам и регистрации
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__top">
+                    <div class="footer__col">
+                        <nav class="footer__nav">
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    О компании
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Производство
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Портфель препаратов
+                                </a>
+                            </div>
+                            <!-- <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Инвесторам
+                                </a>
+                            </div> -->
+                        </nav>
+                    </div>
+                    <div class="footer__col">
+                        <nav class="footer__nav">
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Карьера
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Пресс-служба
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Социальная ответственность
+                                </a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <a href="#" class="footer__nav-link">
+                                    Фармаконадзор
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__contacts">
+                            <div class="footer__contacts-title">
+                                Контакты
+                            </div>
+                            <div class="footer__contacts-item">
+                                <div class="footer__contacts-icon">
+                                    <img src="img/phone.png" alt="Телефон">
+                                </div>
+                                <div class="footer__contacts-text">
+                                    <a href="tel:+74956462868" class="footer__contacts-link">
+                                        +7 (495) 646-28-68
+                                    </a>
+                                    <a href="tel:+74951375727" class="footer__contacts-link">
+                                        +7 (495) 137-57-27
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer__contacts-item footer__contacts-item_email">
+                                <div class="footer__contacts-icon">
+                                    <img src="img/mail.png" alt="Емайл">
+                                </div>
+                                <div class="footer__contacts-text">
+                                    <a href="mailto:info@binnopharmgroup.ru" class="footer__contacts-link">
+                                        info@binnopharmgroup.ru
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer__contacts-item">
+                                <div class="footer__contacts-icon">
+                                    <img src="img/location.png" alt="Локация">
+                                </div>
+                                <div class="footer__contacts-text">
+                                    115114, г. Москва, ул. Кожевническая, д. 14, стр. 5
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__btn">
+                            <a href="#" class="footer__btn-link">
+                                Горячая линия
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">
+                        2021 ©  ООО «Биннофарм Групп»
+                    </div>
+                    <div class="footer__privacy">
+                        <a href="" class="footer__privacy-link">
+                            Политика конфиденциальности
+                        </a>
+                    </div>
+                    <div class="footer__logo">
+                        <a href="#" class="footer__logo-link">
+                            <img src="img/footer-logo.png" alt="Пиксель Плюс">
+                        </a>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
