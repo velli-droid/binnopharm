@@ -756,6 +756,7 @@ h1, h2, h3, h4, h5, h6 , p {
         margin: 36px 0 auto;
     }
     &__pagination {
+        width: auto !important;
         top: auto !important;
         right: auto !important;
         left: 80px !important;
@@ -763,11 +764,6 @@ h1, h2, h3, h4, h5, h6 , p {
         transform: translate3d(0, 0, 0) !important;
         .swiper-pagination-bullet {
             background: $white;
-            margin-left: 0 !important;
-            margin-bottom: 12px !important;
-            &:last-child {
-                margin-bottom: 0 !important;
-            }
         }
     }
     &__btns {
@@ -775,7 +771,6 @@ h1, h2, h3, h4, h5, h6 , p {
         right: 45px;
         bottom: 47px;
         display: flex;
-        flex-direction: column;
         z-index: 1;
     }
     &__btn {
@@ -786,10 +781,10 @@ h1, h2, h3, h4, h5, h6 , p {
         height: 32px;
         border-radius: 50%;
         background: $blue;
-        margin-bottom: 8px;
+        margin-right: 8px;
         cursor: pointer;
         &:last-child {
-            margin-bottom: 0;
+            margin-right: 0;
         }
         svg {
             display: block;
@@ -1041,7 +1036,6 @@ h1, h2, h3, h4, h5, h6 , p {
 }
 
 .swiper-pagination-bullet {
-    margin: 0 10px !important;
     opacity: 0.5 !important;
     width: 10px;
     height: 10px;
@@ -1051,8 +1045,6 @@ h1, h2, h3, h4, h5, h6 , p {
     opacity: 1 !important;
     background: $balck;
 }
-
-
 
 .news-swiper-btn {
     width: 21px;
@@ -2258,6 +2250,12 @@ h1, h2, h3, h4, h5, h6 , p {
     .production-swiper {
         &__slide {
             padding: 72px 17px 172px 17px;
+        }
+        &__pagination {
+            left: 17px !important;
+        }
+        &__btns {
+            right: 17px !important;
         }
     }
     .advantages-list {

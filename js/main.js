@@ -31,7 +31,7 @@ searchBtnclose.onclick = function () {
 
 // swipers
 const gradientSwiperContainer = document.querySelector('.gradient-swiper');
-const verticalSwiperContainer = document.querySelector('.production-swiper');
+const productionSwiperContainer = document.querySelector('.production-swiper');
 const newsSwiperContainer = document.querySelector('.news-swiper__container');
 
 if (gradientSwiperContainer) {
@@ -41,6 +41,20 @@ if (gradientSwiperContainer) {
         navigation: {
             nextEl: '.gradient-swiper__btn-next',
             prevEl: '.gradient-swiper__btn-prev',
+        },
+    });
+}
+
+if (productionSwiperContainer) {
+    const productionSwiper = new Swiper('.production-swiper', {
+        slidesPerView: 1,
+        pagination: {
+            el: '.production-swiper__pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.production-swiper__btn-next',
+            prevEl: '.production-swiper__btn-prev',
         },
     });
 }
