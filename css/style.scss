@@ -1561,10 +1561,11 @@ h1, h2, h3, h4, h5, h6 , p {
         text-align: left;
     }
     &__position_row {
-        text-align: right;
+        text-align: left;
         max-width: none;
         margin-bottom: 0;
         max-width: 500px;
+        min-width: 500px;
     }
 }
 
@@ -2045,6 +2046,12 @@ h1, h2, h3, h4, h5, h6 , p {
         }
         &__btns {
             right: 26px;
+        }
+    }
+    .team-list {
+        &__position_row {
+            max-width: 300px;
+            min-width: 300px;
         }
     }
 }

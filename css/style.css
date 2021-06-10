@@ -2073,10 +2073,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .team-list__position_row {
-  text-align: right;
+  text-align: left;
   max-width: none;
   margin-bottom: 0;
   max-width: 500px;
+  min-width: 500px;
 }
 
 .interactive-map {
@@ -2619,6 +2620,10 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .production-swiper__btns {
     right: 26px;
+  }
+  .team-list__position_row {
+    max-width: 300px;
+    min-width: 300px;
   }
 }
 
