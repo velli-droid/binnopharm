@@ -1710,9 +1710,12 @@ h1, h2, h3, h4, h5, h6 , p {
 
 .map-balloon {
     position: absolute;
-    top: -330px;
+    top: -340px;
     left: -200px;
     width: 434px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 325px;
     padding: 29px 32px 44px;
     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.05);
     background: $white;
@@ -1725,7 +1728,6 @@ h1, h2, h3, h4, h5, h6 , p {
     &__logo {
         max-width: 180px;
         margin-bottom: 14px;
-        min-height: 65px;
         img {
             width: auto;
             height: auto;
