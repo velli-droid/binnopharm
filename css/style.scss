@@ -1550,6 +1550,30 @@ h1, h2, h3, h4, h5, h6 , p {
         opacity: 0.6;
         max-width: 275px;
     }
+    &_row {
+        flex-direction: column;
+    }
+    &__item_row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+        max-width: none;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__name_row {
+        max-width: none;
+        margin-bottom: 0;
+    }
+    &__position_row {
+        text-align: right;
+        max-width: none;
+        margin-bottom: 0;
+        max-width: 500px;
+    }
 }
 
 // PAGE MANUFACTURE
@@ -1587,24 +1611,99 @@ h1, h2, h3, h4, h5, h6 , p {
         right: 0;
         width: 50%;
         max-width: 568px;
-        svg {
+    }
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        img {
             width: 100%;
             height: auto;
             display: block;
-            object-fit: contain;
         }
+    }
+}
+
+.map-group {
+    position: absolute;
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+#map-group-1 {
+    top: 310px;
+    left: 190px;
+}
+
+#map-group-2 {
+    top: 350px;
+    left: 145px;
+}
+
+#map-group-3 {
+    top: 350px;
+    left: 145px;
+}
+
+.map-point {
+    display: flex;
+    align-items: center;
+    &__icon {
+        position: relative;
+        width: 33.19px;
+        height: 33.19px;
+        border-radius: 50%;
+        background: $white;
+        border: 1px solid $blue;
+        margin-right: 10px;
+        cursor: pointer;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 12.45px;
+            height: 12.45px;
+            background: $blue;
+            border-radius: 50%;
+        }
+        &:hover {
+            background: $blue;
+            &::before {
+                background: $white;
+            }
+        }
+        &:hover ~ .map-point__city {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__city {
+        font-weight: 600;
+        line-height: 120%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s linear;
     }
 }
 
 .map-balloon {
     position: absolute;
-    top: -10px;
+    top: -330px;
+    left: -200px;
     width: 434px;
     padding: 29px 32px 44px;
     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.05);
     background: $white;
     color: $balck;
-    visibility: hidden;
+    max-width: 434px;
+    margin-bottom: 20px;
+    display: none;
     opacity: 0;
     transition: .3s linear;
     &__logo {
@@ -1627,6 +1726,17 @@ h1, h2, h3, h4, h5, h6 , p {
         line-height: 120%;
         margin-bottom: 30px;
     }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 26px;
+        height: 12px;
+        background: url(../img/balloon-before.png) no-repeat center;
+        background-size: contain;
+    }
     .advantages-list__item_balloon {
         color: $balck;
         font-weight: 600;
@@ -1643,13 +1753,9 @@ h1, h2, h3, h4, h5, h6 , p {
     }
 }
 
-.map-group {
-    area {
-        &:hover ~ .map-balloon {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
+.map-point:hover ~ .map-balloon {
+    opacity: 1;
+    display: block;
 }
 
 .square-list {
