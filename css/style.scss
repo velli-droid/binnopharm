@@ -1580,9 +1580,11 @@ h1, h2, h3, h4, h5, h6 , p {
 // PAGE MANUFACTURE
 
 .interactive-map {
-    position: relative;
     overflow: hidden;
     padding: 58px 0 49px;
+    &__inner {
+        position: relative;
+    }
     &__title {
         margin-bottom: 23px;
     }
@@ -1608,7 +1610,7 @@ h1, h2, h3, h4, h5, h6 , p {
     }
     &__pic {
         position: absolute;
-        top: 83px;
+        top: 30px;
         right: 0;
         width: 50%;
         max-width: 568px;
@@ -1616,8 +1618,11 @@ h1, h2, h3, h4, h5, h6 , p {
     &__wrapper {
         position: relative;
         width: 100%;
-        img {
-            width: 100%;
+        .map-image {
+            position: absolute;
+            top: -800px;
+            left: 5px;
+            width: auto;
             height: auto;
             display: block;
         }
@@ -1645,8 +1650,18 @@ h1, h2, h3, h4, h5, h6 , p {
 }
 
 #map-group-3 {
-    top: 350px;
-    left: 145px;
+    top: 390px;
+    left: 195px;
+}
+
+#map-group-4 {
+    top: 460px;
+    left: 415px;
+}
+
+#map-group-5 {
+    top: 665px;
+    left: 150px;
 }
 
 .map-point {
@@ -1708,10 +1723,11 @@ h1, h2, h3, h4, h5, h6 , p {
     opacity: 0;
     transition: .3s linear;
     &__logo {
-        width: 180px;
+        max-width: 180px;
         margin-bottom: 14px;
+        min-height: 65px;
         img {
-            width: 100%;
+            width: auto;
             height: auto;
             display: block;
         }
