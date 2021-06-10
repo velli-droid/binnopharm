@@ -1567,6 +1567,7 @@ h1, h2, h3, h4, h5, h6 , p {
     &__name_row {
         max-width: none;
         margin-bottom: 0;
+        text-align: left;
     }
     &__position_row {
         text-align: right;
@@ -2115,6 +2116,11 @@ h1, h2, h3, h4, h5, h6 , p {
             width: 100%;
         }
     }
+    .team-list {
+        &__position_row {
+            max-width: 300px;
+        }
+    }
 }
 
 @media (max-width: 940px) {
@@ -2448,6 +2454,9 @@ h1, h2, h3, h4, h5, h6 , p {
         &__item {
             width: 40%;
         }
+        &__item_row {
+            width: 100%;
+        }
     }
 }
 
@@ -2456,6 +2465,17 @@ h1, h2, h3, h4, h5, h6 , p {
         &__item {
             width: 100%;
         }
+        &__item_row {
+            flex-direction: column;
+        }
+        &__name_row {
+            margin-bottom: 10px;
+        }
+        &__position_row {
+            text-align: left;
+            max-width: 100%;
+        }
     }
+    
 }
 
